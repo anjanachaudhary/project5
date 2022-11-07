@@ -102,13 +102,13 @@
              </div>
 
             <div class="form-group">
-                    <label for="user"> Branch:</label>
-                     <select name="branch" id="branch"  value ="ME" {{($employee->branch=="ME")? 'selected' : ""}}>
-                        <option value="CSE">CSE</option>
-                        <option value="ME">ME</option>
-                         <option value="MBA">MBA</option>  
-                     </select>
-                     @error('branch')
+             <label for="user"> Branch:</label>
+             <select name="branch">
+                <option {{old('branch',$employee->branch)=="CSE"? 'selected':''}}  value="CSE">CSE</option>
+                <option {{old('branch',$employee->branch)=="ME"? 'selected':''}} value="ME">ME</option>
+                <option {{old('branch',$employee->branch)=="MBA"? 'selected':''}} value="MBA">MBA</option>
+             </select>
+                 @error('branch')
                     <p class=valid-feedback>{{$message}}</p>
                  @enderror
                 </div>

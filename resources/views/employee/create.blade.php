@@ -90,7 +90,6 @@
                 <div class="form-group">
                     <label for="user"> Branch:</label>
                     <select name="branch" id="branch" required>
-                        <option > select </option>
                         <option value="CSE">CSE</option>
                         <option value="ME">ME</option>
                          <option value="MBA">MBA</option>  
